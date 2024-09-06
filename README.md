@@ -26,7 +26,7 @@ Add Task: Users can create new tasks.
 View Task: Users can see the list of tasks.Edit Task: Users can update existing tasks.
 Delete Task: Users can remove tasks.
 
-#esting
+#Testing
 Unit Tests: Wrote tests to check that both the server and front-end code work correctly.
 Documentation: Used Postman to document the API.
 Wireframes

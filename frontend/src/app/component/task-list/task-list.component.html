@@ -1,0 +1,15 @@
+<div class="task-list">
+  <h2>All Tasks</h2>
+  <button (click)="openTaskForm()">Add Task</button>
+  <input type="text" [(ngModel)]="searchQuery" placeholder="Search tasks" />
+  <div *ngFor="let task of tasks | filter:searchQuery">
+    <div class="task-item">
+      <h3>{{ task.title }}</h3>
+      <p>{{ task.description }}</p>
+      <p><strong>Status:</strong> {{ task.status }}</p>
+      <p><strong>Due Date:</strong> {{ task.dueDate | date }}</p>
+      <button (click)="editTask(task)">Edit</button>
+      <button (click)="deleteTask(task._id)">Delete</button>
+    </div>
+  </div>
+</div>

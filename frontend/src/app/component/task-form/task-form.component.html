@@ -1,0 +1,30 @@
+<div class="task-form">
+    <h2>{{ isEdit ? 'Edit Task' : 'New Task' }}</h2>
+    <form (ngSubmit)="onSubmit()">
+      <label for="title">Title:</label>
+      <input id="title" [(ngModel)]="taskForm.title" name="title" required />
+
+      <label for="description">Description:</label>
+      <textarea id="description" [(ngModel)]="taskForm.description" name="description"></textarea>
+
+      <label for="dueDate">Due Date:</label>
+      <input id="dueDate" type="date" [(ngModel)]="taskForm.dueDate" name="dueDate" required />
+
+      <label for="status">Status:</label>
+      <select id="status" [(ngModel)]="taskForm.status" name="status">
+        <option value="Not Started">Not Started</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+      </select>
+
+      <label for="priority">Priority:</label>
+      <select id="priority" [(ngModel)]="taskForm.priority" name="priority">
+        <option value="Low">Low</option>
+        <option value="Normal">Normal</option>
+        <option value="High">High</option>
+      </select>
+
+      <button type="submit">{{ isEdit ? 'Update' : 'Add' }} Task</button>
+      <button type="button" (click)="cancel()">Cancel</button>
+    </form>
+  </div>
